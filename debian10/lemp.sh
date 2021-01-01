@@ -11,7 +11,11 @@ echo deb https://packages.sury.org/php/ $(lsb_release -sc) main | tee /etc/apt/s
 
 apt-get update && apt-get upgrade -y
 
+cd
+# set time GMT +7 jakarta
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
+cd
 #install webserver
 apt install nginx -y
 sudo systemctl start nginx
