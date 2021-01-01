@@ -4,7 +4,7 @@
 #OS Debian 9
 
 apt-get install wget curl -y
-apt-get install apt-transport-https lsb-release ca-certificates
+apt-get install apt-transport-https lsb-release ca-certificates -y
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo deb https://packages.sury.org/php/ $(lsb_release -sc) main | tee /etc/apt/sources.list.d/php7.4.list
 
