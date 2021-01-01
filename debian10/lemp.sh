@@ -20,17 +20,18 @@ cd
 apt install nginx -y
 sudo systemctl start nginx
 systemctl enable nginx
-mysql_secure_installation
-
-
-#install mariaSQL
-apt install mariadb-server mariadb-client -y
-systemctl start mariadb
-systemctl enable mariadb
 
 #install php
 apt-get install php7.4-fpm php7.4-curl php7.4-gd php7.4-intl php7.4-mbstring php7.4-soap php7.4-xml php7.4-xmlrpc php7.4-zip php7.4-mysql -y
 sudo systemctl start php7.4-fpm
 sudo systemctl enable php7.4-fpm
+
+#install mariaSQL
+apt install mariadb-server mariadb-client -y
+systemctl start mariadb
+systemctl enable mariadb
+mysql_secure_installation
+
+
 
 
